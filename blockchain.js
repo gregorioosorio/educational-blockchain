@@ -1,5 +1,4 @@
-var crypto = require('crypto');
-
+const SHA256 = require('crypto-js/sha256');
 const EC = require('elliptic').ec;
 const ec = new EC('secp256k1');
 
@@ -16,10 +15,8 @@ class Transaction {
     }
 
     calculateHash() {
-        return crypto
-            .createHash('sha256')
-            .update(this.fromAddress + this.toAdress + this.amount + this.sequence + this.timestamp)
-            .digest('hex');
+        return SHA256(this.fromAddress + this.toAdress + this.amount + this.sequence + this.timestamp)
+            .toString();
     }
 
     signTransaction(signingKey) {
@@ -51,10 +48,8 @@ class Block {
     }
 
     calculateHash() {
-        return crypto
-            .createHash('sha256')
-            .update(JSON.stringify(this.transactions).toString() + this.previousHash + this.salt + this.timestamp)
-            .digest('hex');
+        return SHA256(JSON.stringify(this.transactions).toString() + this.previousHash + this.salt + this.timestamp)
+            .toString();
     }
 
     mineBlock(dificulty) {
