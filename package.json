@@ -4,7 +4,6 @@
   "description": "Educational blockchain coin implementation",
   "main": "blockchain.js",
   "dependencies": {
-    "crypto": "^1.0.1",
     "elliptic": "^6.4.1"
   },
   "devDependencies": {},
