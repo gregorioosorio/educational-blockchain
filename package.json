@@ -1,0 +1,27 @@
+{
+  "name": "educational-blockchain",
+  "version": "1.0.0",
+  "description": "Educational blockchain coin implementation",
+  "main": "blockchain.js",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "elliptic": "^6.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregorioosorio/educational-blockchain.git"
+  },
+  "keywords": [
+    "blockchain"
+  ],
+  "author": "gregorioosorio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gregorioosorio/educational-blockchain/issues"
+  },
+  "homepage": "https://github.com/gregorioosorio/educational-blockchain#readme"
+}
