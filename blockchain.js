@@ -32,6 +32,10 @@ class Transaction {
             return true;
         }
 
+        if(this.signature === undefined) {
+            return false;
+        }
+
         const key = ec.keyFromPublic(this.fromAddress, 'hex');
         return key.verify(this.calculateHash(), this.signature);
     }
