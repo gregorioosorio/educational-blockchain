@@ -32,7 +32,7 @@ class Transaction {
             return true;
         }
 
-        if(this.signature === undefined) {
+        if(!this.signature) {
             return false;
         }
 
