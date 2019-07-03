@@ -95,7 +95,7 @@ class BlockChain {
     }
 
     minePendingTransaction(minerWallet) {
-        this.pendingTransactions.push(new Transaction('system', minerWallet, this.rewardForMiner));
+        this.pendingTransactions.push(new Transaction('system', minerWallet.walletAddress, this.rewardForMiner));
         const lastBlock = this.getLastBlock(); 
         const newBlock = new Block(this.pendingTransactions, lastBlock.hash);
         newBlock.mineBlock(this.dificulty);
